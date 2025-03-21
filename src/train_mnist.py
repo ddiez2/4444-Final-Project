@@ -6,6 +6,7 @@ import argparse
 from sklearn.model_selection import train_test_split
 from mlp import Relu, Softmax, CrossEntropy, MultilayerPerceptron, Layer, Mish
 import matplotlib.pyplot as plt
+import kagglehub
 
 '''
 MOST CODE FOR INGESTION IS FROM THE SAMPLE CODE GIVEN FROM MOODLE LINK.
@@ -104,7 +105,9 @@ def main(epochs, batch_size, learning_rate, use_rmsprop):
     '''
     Follows sample code given on Moodle.
     '''
-    input_path = "../MNIST/"
+    path = kagglehub.dataset_download("hojjatk/mnist-dataset")
+    print("Path to dataset files:", path)
+    input_path = path
     training_images_filepath = join(input_path, 'train-images-idx3-ubyte/train-images-idx3-ubyte')
     training_labels_filepath = join(input_path, 'train-labels-idx1-ubyte/train-labels-idx1-ubyte')
     test_images_filepath = join(input_path, 't10k-images-idx3-ubyte/t10k-images-idx3-ubyte')
