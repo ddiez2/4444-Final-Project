@@ -12,8 +12,12 @@ cd into the src folder of this project
 
 in the terminal run:
 
-python train_mpg.py --epochs 20 --batch_size 5 --learning_rate 0.001 --rmsprop (for MPG dataset)
+(for MPG dataset) - data provided
+
+python train_mpg.py --epochs 20 --batch_size 5 --learning_rate 0.001 --rmsprop
 
 and 
 
-python train_mnist.py --epochs 20 --batch_size 64 --learning_rate 0.0001 --rmsprop   (For MNIST dataset)                                                                                                   
+(For MNIST dataset) - pulls from Kaggle repo
+
+python train_mnist.py --epochs 20 --batch_size 64 --learning_rate 0.0001 --rmsprop                                                                                                  
